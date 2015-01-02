@@ -1,0 +1,23 @@
+@charset "utf-8";
+/** CSS Document 
+ * 幻方相关样式文件
+ * 文件负责：姜季廷
+ * 2013年6月
+ **/
+
+body{
+	b
+}
+/* 幻方外层容器 */
+.huanfang{
+	width:1000px;
+	margin:auto;
+	padding:20px;
+	margin-top:50px;
+	border:#03C 0px solid;
+}
+/* 各个区域 */
+.cell{
+}
+.mainFrame{
+}

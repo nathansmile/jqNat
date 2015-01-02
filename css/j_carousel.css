@@ -1,0 +1,138 @@
+@charset "utf-8";
+/** CSS Document 
+ * 轮播组件样式文件
+ * Nathan, 2013.12.16制作
+ **/
+.carousel_round, .carousel_round_box * {
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.j_carousel	{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.j_carousel	.imgFrame {
+	position: absolute;
+	height: 100%;
+}
+.j_carousel	.imgFrame li {
+	float: left;
+	height: 100%;
+}
+.j_carousel	.imgFrame li.forFade {
+	position: absolute;
+	top: 0;
+}
+.j_carousel .leftArrow, .j_carousel .rightArrow {
+	width: 50px;
+	height: 50px;
+	font-size: 45px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: 800;
+	color: #222;
+	position: absolute;
+	top: 45%;
+	cursor: pointer;
+}
+.j_carousel .leftArrow:hover, .j_carousel .rightArrow:hover {
+	color: #FFF;
+	background: #000;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+}
+.j_carousel .leftArrow {
+	left: 5px;
+}
+.j_carousel .leftArrow:hover {
+	left: 3px;
+}
+.j_carousel .rightArrow {
+	right: 5px;
+}
+.j_carousel .rightArrow:hover {
+	right: 3px;
+}
+.j_carousel	img {
+	width: 100%;
+	height: 100%;
+}
+.j_carousel	.bottonInfo {
+	width: 100%;
+	height: 100px;
+	background: #000;
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	position: absolute;
+	bottom: 0;
+	color: #FFF;
+}
+.j_carousel	.bottonInfo li {
+	display: none;
+}
+.j_carousel	.bottonInfo li.active {
+	display: block;
+}
+.j_carousel	.bottonInfo p, .j_carousel	.bottonInfo h4 {
+	margin: 5px 15px;
+}
+.j_carousel	.activePoint {
+	height: 15px;
+	position: absolute;
+	padding: 10px 15px;
+}
+.j_carousel	.activePoint.bg {
+	background: #FFF;
+}
+.j_carousel	.activePoint.lt, .j_carousel .activePoint.rt {
+	top: 10px;
+}
+.j_carousel	.activePoint.lb, .j_carousel .activePoint.rb {
+	bottom: 10px;
+}
+.j_carousel	.activePoint.lt, .j_carousel .activePoint.lb {
+	left: 15px;
+}
+.j_carousel	.activePoint.rt, .j_carousel .activePoint.rb {
+	right: 15px;
+}
+.j_carousel	.activePoint li {
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	background: #888;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+	text-align: center;
+}
+.j_carousel	.activePoint li:last-child {
+	margin-right: 0;
+}
+.j_carousel	.activePoint li.active {
+	background: #691419;
+	color: #FFF;
+}
+.j_carousel	.activePoint.size_m {
+	height: 20px;
+}
+.j_carousel .activePoint.size_m li {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+}
+.j_carousel	.activePoint.size_l {
+	height: 25px;
+}
+.j_carousel .activePoint.size_l li {
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+}

@@ -1,0 +1,209 @@
+@charset "utf-8";
+/** CSS Document 
+ * 通用样式文件
+ * 大型框架相关CSS
+ * 文件负责：Nathan Jiang (nathansmile@163.com)
+ * 2013年4月
+ **/
+* {margin: 0; padding: 0; border: 0;}
+.clr {clear: both; padding: 0; margin: 0; width: 100%; font-size: 0px; line-height: 0px;}
+.clearfix:after {clear: both;content: " "; width: 100%; font-size: 0px; line-height: 0px; display: inline-block;}
+body {font-size: 13px; line-height: 1.8em; color:#333;}
+
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+/* 横线 */
+hr{width:100%;border:none;margin:auto;}
+.hr0{ height:1px;border-top:1px dashed #0066CC;}
+.hr1{ height:1px;border-top:1px solid #555555;}
+.hr2{ height:3px;border-top:3px double red;}
+.hr3{ height:5px;border-top:5px ridge green;}
+.hr4{ height:10px;border-top:10px groove skyblue;}
+.hr5{ height:10px;border-top:10px groove skyblue;}
+/* 间距 */
+.mt-xs{ margin-top: 0.25em;}
+.mt-s{ margin-top: 0.5em;}
+.mt-m{ margin-top: 1em;}
+.mt-l{ margin-top: 2em;}
+.mt-xl{ margin-top: 3em;}
+.mt-xxl{ margin-top: 5em;}
+
+.mb-xs{ margin-bottom: 0.25em;}
+.mb-s{ margin-bottom: 0.5em;}
+.mb-m{ margin-bottom: 1em;}
+.mb-l{ margin-bottom: 2em;}
+.mb-xl{margin-bottom: 3em;}
+.mb-xxl{margin-bottom: 5em;}
+
+.mr-s{ margin-right: 0.5em;}
+.mr-m{ margin-right: 1em;}
+.mr-l{ margin-right: 2em;}
+
+.ml-s{ margin-left: 0.5em;}
+.ml-m{ margin-left: 1em;}
+.ml-l{ margin-left: 2em;}
+
+.pt-s{ padding-top: 0.5em;}
+.pt-m{ padding-top: 1em;}
+.pt-l{ padding-top: 2em;}
+.pb-s{ padding-bottom: 0.5em;}
+.pb-m{ padding-bottom: 1em;}
+.pb-l{ padding-bottom: 2em;}
+
+.pd-s{ padding: 0.5em;}
+.pd-m{ padding: 1em;}
+.pd-l{ padding: 2em;}
+/* 样式 */
+.al-l{ text-align: left;}
+.al-c{ text-align: center;}
+.al-r{ text-align: right;}
+.fl-r{ float: right;}
+.fl-l{ float: left;}
+
+/* 通用标签 */
+a{text-decoration:none; color:#333;}
+a:hover{text-decoration:underline; color:#00F;}
+ul li {
+	list-style:none;
+}
+/* 表单通用 */
+.inputBox{
+    height:19px;
+	border:#666 solid 1px;
+	font-size:18px;
+	color:#000;
+	padding:3px;
+}
+.selectBox{
+    height:26px;
+	border:#666 solid 1px;
+	font-size:18px;
+	color:#000;
+}
+.width_200{width:200px;}
+.width_208{width:208px;}
+.inputError{border:#F36 solid 1px;color:#F00;}
+.errorInfo{ color:#F00;}/*错误信息提示*/
+.inputNow{border:#0F0 solid 1px;color:#000;}
+.leftPoint{
+	text-align:right;
+}
+/* 按钮 */
+a.btn, button.btn {
+	cursor: pointer;
+	padding: 0.5em 1em;
+	background: none;
+	border-radius: 5px;
+}
+a.btn.blue, button.btn.blue {
+	color: #FFF;
+	background: #09F;
+	border: 1px solid #09C;
+}
+a.btn.blue:hover, button.btn.blue:hover {
+	background: #08E;
+.opacity-5 {
+		filter:alpha(opacity=50);
+		-moz-opacity:0.5;
+		-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+.opacity-7 {
+		filter:alpha(opacity=70);
+		-moz-opacity:0.7;
+		-khtml-opacity: 0.7;
+	opacity: 0.7;
+}
+.opacity-8 {
+		filter:alpha(opacity=80);
+		-moz-opacity:0.8;
+		-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+.opacity-9 {
+		filter:alpha(opacity=90);
+		-moz-opacity:0.9;
+		-khtml-opacity: 0.9;
+	opacity: 0.9;
+}
+/* css3 */
+	/* 倒影 */
+.reflect-below {
+	-moz-box-reflect: below -10px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));
+	-webkit-box-reflect: below -10px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));
+	-ms-box-reflect: below -10px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));
+box-reflect: below -10px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));
+}
+.reflect-below-l {
+	-moz-box-reflect: below -23px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));
+	-webkit-box-reflect: below -23px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));
+	-ms-box-reflect: below -23px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));
+box-reflect: below -23px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.5, transparent), to(white));
+}
+
+.radius-xs {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-ms-border-radius: 2px;
+border-radius: 2px;
+}
+.radius-s {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+border-radius: 3px;
+}
+.radius-m {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+border-radius: 5px;
+}
+.radius-l {
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-ms-border-radius: 8px;
+border-radius: 8px;
+}
+.radius-xl {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-ms-border-radius: 10px;
+border-radius: 10px;
+}
+.radius-round {
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+border-radius: 50%;
+}
+.radius-m-b {
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-ms-border-radius: 0 0 5px 5px;
+border-radius: 0 0 5px 5px;
+}
+.radius-m-t {
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-ms-border-radius: 5px 5px 0 0;
+border-radius: 5px 5px 0 0;
+}
+
+.box-shadow-m {
+		-webkit-box-shadow: 3px 3px 1px #999;
+		-moz-box-shadow: 3px 3px 1px #999;
+		-o-box-shadow: 3px 3px 1px #999;
+	box-shadow: 3px 3px 1px #999;
+}
+.box-shadow-s {
+		-webkit-box-shadow: 1px 1px 1px #999;
+		-moz-box-shadow: 1px 1px 1px #999;
+		-o-box-shadow: 1px 1px 1px #999;
+	box-shadow: 1px 1px 1px #999;
+}

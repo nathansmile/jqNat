@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/j_carousel.css" />
+<script type="text/javascript" src="JS/jquery.js"></script>
+<script type="text/javascript" src="JS/j_carousel.js"></script>
+<title>首页</title>
+</head>
+<style>
+.testContent {
+	width: 1000px;
+	height: 400px;
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid #F93;
+	border-radius: 13px;
+	overflow: hidden;
+}
+th {
+	text-align: right;
+}
+#testContent .green li {
+	background: #0F0;
+}
+#testContent .orange li {
+	background: #F96;
+}
+#testContent .red li {
+	background: #F00;
+}
+</style>
+<body>
+    <!--中间巨幅图片-->
+    <div class="testContent" id="testContent">
+        <div class="j_carousel">
+            <ul class="imgFrame">
+                <li><a href="content.html"><img src="photo/111.jpg" /></a></li>
+                <li><a href="content.html"><img src="photo/222.jpg" /></a></li>
+                <li><a href="content.html"><img src="photo/333.jpg" /></a></li>
+                <li><a href="content.html"><img src="photo/444.jpg" /></a></li>
+                <li><a href="content.html"><img src="photo/pic.jpg" /></a></li>
+            </ul>
+            <ul class="bottonInfo">
+                <li><h4>杭州师范大学</h4><p>杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是。</p></li>
+                <li><h4>杭州师范大学2222</h4><p>杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是。</p></li>
+                <li><h4>杭州师范大333</h4><p>杭州师范gg大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是。</p></li>
+                <li><h4>杭州师范334444</h4><p>杭州师范gg大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是。</p></li>
+                <li><h4>杭州师范5555</h4><p>杭州师范gg大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是杭州师范大学是。</p></li>
+            </ul>
+        </div>
+    </div> 
+    <!--中间巨幅图片结束-->
+	<div class="main mt-m">
+    	<h1>demo数据支持的全部参数</h1>
+        <table border="1">
+          <tr>
+            <th>外层容器ID：</th>
+            <td><input type="text" id="frameID" name="frameID" value="testContent"/></td>
+            <td rowspan="11">
+            	#testContent .green li{<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;background: #0F0;<br />
+                }<br />
+            	#testContent .orange li{<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;background: #F96;<br />
+                }<br />
+            	#testContent .red li{<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;background: #F00;<br />
+                }
+            </td>
+          </tr>
+          <tr>
+            <th>图片停留切换时间：</th>
+            <td><input type="text" id="carouselSpeed" name="carouselSpeed" value="3000"/></td>
+          </tr>
+          <tr>
+            <th>图片之间切换时间：</th>
+            <td><input type="text" id="toggleSpeed" name="toggleSpeed" value="700"/></td>
+          </tr>
+          <tr>
+            <th>切换模式：</th>
+            <td>
+            	<label><input type="radio" name="slideType" value="normal" checked="checked" /> 普通</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="slideType" value="fade" /> 淡入淡出</label>
+            </td>
+          </tr>
+          <tr>
+            <th>快捷小点样式：</th>
+            <td>
+            	<label><input type="radio" name="pointStyle" value="no" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointStyle" value="nonum" checked="checked" /> 没数字</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointStyle" value="num" /> 有数字</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>快捷小点位置：</th>
+            <td>
+            	<label><input type="radio" name="pointPosition" value="lt" /> 左上</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointPosition" value="lb" /> 左下</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointPosition" value="rt" /> 右上</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointPosition" value="rb" checked="checked" /> 右下</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>快捷小点形状：</th>
+            <td>
+            	<label><input type="radio" name="pointRound" value="no" checked="checked" /> 正方形</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointRound" value="yes" /> 圆形(CSS3)</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>快捷小点大小：</th>
+            <td>
+            	<label><input type="radio" name="pointSize" value="size_s" checked="checked" /> size_s</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointSize" value="size_m" /> size_m</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointSize" value="size_l" /> size_l</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>快捷小点注入样式：</th>
+            <td>
+            	<label><input type="radio" name="pointClass" value="" checked="checked" /> null</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointClass" value="green" /> green</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointClass" value="orange" /> orange</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointClass" value="red" /> red</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>快捷小点背景：</th>
+            <td>
+            	<label><input type="radio" name="pointBg" value="" checked="checked" /> null</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="pointBg" value="bg" /> 白色背景</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>左右切换：</th>
+            <td>
+            	<label><input type="radio" name="arrow" value="no" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrow" value="normal" checked="checked" /> 正方形</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrow" value="round" /> 圆形(CSS3)</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>左右切换注入样式：</th>
+            <td><input type="text" name="arrowClass" value=""/></td>
+          </tr>
+          <tr>
+            <th colspan="2"><button class="btn blue" id="justApply">应用</button></th>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+    </div>
+<script type="text/javascript">
+$(document).ready(function(){
+	//初始轮播组件
+	var basicHtml = $(".testContent").html();
+	$("#justApply").click(function(){
+		$(".testContent .j_carousel").remove();
+		$(".testContent").html(basicHtml);
+		var o = {
+				frameID:       $("input[name='frameID']").val(),
+				carouselSpeed: $("input[name='carouselSpeed']").val(),
+				toggleSpeed:   $("input[name='toggleSpeed']").val(),
+				slideType:     $("input[name='slideType']:checked").val(),
+				pointStyle:    $("input[name='pointStyle']:checked").val(),
+				pointPosition: $("input[name='pointPosition']:checked").val(),
+				pointRound:    $("input[name='pointRound']:checked").val(),
+				pointSize:     $("input[name='pointSize']:checked").val(),
+				pointClass:    $("input[name='pointClass']:checked").val(),
+				pointBg:       $("input[name='pointBg']:checked").val(),
+				arrow:         $("input[name='arrow']:checked").val(),
+				arrowClass:    $("input[name='arrowClass']").val()
+			};
+		console.warn($("#testContent").jCarousel(o));
+	});
+	$("#justApply").click();
+});
+</script>
+</body>
+</html>

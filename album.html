@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/j_album.css" />
+<script type="text/javascript" src="JS/jquery.js"></script>
+<script type="text/javascript" src="JS/j_album.js"></script>
+<title>相册</title>
+</head>
+<style>
+.testContent {
+	/*width: 1000px;
+	height: 500px;*/
+	width: 600px;
+	height: 300px;
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid #F93;
+	border-radius: 13px;
+	overflow: hidden;
+}
+th {
+	text-align: right;
+}
+</style>
+<body>
+    <!--中间巨幅图片-->
+    <div class="testContent" id="testContent">
+        <ul>
+            <li jsrc='photo/pic.jpg' jtext='图片1图片1图片1图片1' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/111.jpg' jbigsrc='photo/111.jpg' jtext='图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2图片2' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/222.jpg' jbigsrc='photo/222.jpg' jtext='图片3图片1图片1图片1' jhref='http://www.baidu.com' jtarget='self'></li>
+            <li jsrc='photo/333.jpg' jbigsrc='photo/333.jpg' jtext='图片4图片1图片1图片1' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/444.jpg' jbigsrc='photo/444.jpg' jtext='图片5图片5图片5图片5图片5' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/pic.jpg' jbigsrc='photo/pic.jpg' jtext='图片1图片1图片1图片1' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/111.jpg' jbigsrc='photo/111.jpg' jtext='图片2图片2图片2图片2' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/222.jpg' jbigsrc='photo/222.jpg' jtext='图片3图片1图片1图片1' jhref='http://www.baidu.com' jtarget='self'></li>
+            <li jsrc='photo/333.jpg' jbigsrc='photo/333.jpg' jtext='图片4图片1图片1图片1' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/444.jpg' jbigsrc='photo/444.jpg' jtext='图片5图片5图片5图片5图片5' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/pic.jpg' jbigsrc='photo/pic.jpg' jtext='图片1图片1图片1图片1' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/111.jpg' jbigsrc='photo/111.jpg' jtext='图片2图片2图片2图片2' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/222.jpg' jbigsrc='photo/222.jpg' jtext='图片3图片1图片1图片1' jhref='http://www.baidu.com' jtarget='self'></li>
+            <li jsrc='photo/333.jpg' jbigsrc='photo/333.jpg' jtext='图片4图片1图片1图片1' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/444.jpg' jbigsrc='photo/444.jpg' jtext='图片5图片5图片5图片5图片5' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/pic.jpg' jbigsrc='photo/pic.jpg' jtext='图片1图片1图片1图片1' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/111.jpg' jbigsrc='photo/111.jpg' jtext='图片2图片2图片2图片2' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/222.jpg' jbigsrc='photo/222.jpg' jtext='图片3图片1图片1图片1' jhref='http://www.baidu.com' jtarget='self'></li>
+            <li jsrc='photo/333.jpg' jbigsrc='photo/333.jpg' jtext='图片4图片1图片1图片1' jhref='http://www.baidu.com' jtarget='_blank'></li>
+            <li jsrc='photo/444.jpg' jbigsrc='photo/444.jpg' jtext='图片5图片5图片5图片5图片5' jhref='http://www.baidu.com' jtarget='_blank'></li>
+        </ul>
+    </div> 
+    <!--中间巨幅图片结束-->
+	<div class="main mt-m">
+    	<h1>demo数据支持的全部参数</h1>
+        <table border="1">
+          <tr>
+            <th>图片之间切换时间：</th>
+            <td><input type="text" id="toggleSpeed" name="toggleSpeed" value="700"/></td>
+            <td rowspan="5" style="border:1px solid #630;">
+            	<h4>数据对象</h4>
+            </td>
+          </tr>
+          <tr>
+            <th>切换模式（对于大图而言）：</th>
+            <td>
+            	<label><input type="radio" name="slideType" value="normal" checked="checked" /> 普通</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="slideType" value="fade" /> 加载动画，淡入淡出</label>
+            </td>
+          </tr>
+          <tr>
+            <th>大图类型：</th>
+            <td>
+            	<label><input type="radio" name="showBoxType" value="no" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="showBoxType" value="img" checked="checked" /> 仅一张图片</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="showBoxType" value="rightText" /> 右侧文字</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="showBoxType" value="underText" /> 底下文字</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>大图点击类型：</th>
+            <td>
+            	<label><input type="radio" name="showBoxClick" value="no" checked="checked" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="showBoxClick" value="bigger" /> 放大</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="showBoxClick" value="link" /> 一个链接</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>预览图类型：</th>
+            <td>
+            	<label><input type="radio" name="thumbBoxType" value="img" checked="checked" /> 仅一张图片</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbBoxType" value="underText" /> 底下文字</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>预览图点击类型：</th>
+            <td>
+            	<label><input type="radio" name="thumbBoxClick" value="no" checked="checked" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbBoxClick" value="bigger" /> 放大</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbBoxClick" value="link" /> 一个链接</label>&nbsp;&nbsp;<br>（若有大图则仅为对大图进行切换）
+            </td>
+          </tr>
+          <tr>
+            <th>展示区左右箭头样式：</th>
+            <td>
+            	<label><input type="radio" name="arrowStyle" value="no" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrowStyle" value="tri" checked="checked" /> 三角形</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrowStyle" value="arr" /> 箭头</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrowStyle" value="blue-img" /> 蓝色图片</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrowStyle" value="orange-img" /> 黄色图片</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>展示区左右箭头背景：</th>
+            <td>
+            	<label><input type="radio" name="arrow" value="no" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrow" value="metro" checked="checked" /> 正方形</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrow" value="metro round" /> 圆形(CSS3)</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="arrow" value="full" /> 长方形</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>预览图左右箭头样式：</th>
+            <td>
+            	<label><input type="radio" name="thumbArrowStyle" value="no" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbArrowStyle" value="tri" checked="checked" /> 三角形</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbArrowStyle" value="arr" /> 箭头</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbArrowStyle" value="blue-img" /> 蓝色图片</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbArrowStyle" value="orange-img" /> 黄色图片</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>预览图左右箭头背景：</th>
+            <td>
+            	<label><input type="radio" name="thumbArrow" value="no" /> 无</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbArrow" value="metro" checked="checked" /> 正方形</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbArrow" value="metro round" /> 圆形(CSS3)</label>&nbsp;&nbsp;
+            	<label><input type="radio" name="thumbArrow" value="full" /> 长方形</label>&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <th>注入代码：</th>
+            <td><input type="text" name="str" value="<div style=‘position: fixed;’>1111</div>"/></td>
+          </tr>
+          <tr>
+            <th colspan="2"><button class="btn blue" id="justApply">应用</button></th>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+    </div>
+<script type="text/javascript">
+$(document).ready(function(){
+	//初始图片组件
+	var basicHtml = $(".testContent").html();
+	//测试行为控制
+	$("input[name='thumbBoxClick']").attr("disabled", "disabled");
+	$("input[name='showBoxType']").change(function(){
+		if ($("input[name='showBoxType']:checked").val() !== "no") {
+			$("input[name='thumbBoxClick']").attr("disabled", "disabled");
+			$("input[name='showBoxClick']").removeAttr("disabled");
+		} else {
+			$("input[name='showBoxClick']").attr("disabled", "disabled");
+			$("input[name='thumbBoxClick']").removeAttr("disabled");
+		}
+	});
+	$("input[name='thumbArrowStyle']").change(function(){
+		if ($("input[name='thumbArrowStyle']:checked").val() === "no") {
+			$("input[name='thumbArrow']").attr("disabled", "disabled");
+		} else {
+			$("input[name='thumbArrow']").removeAttr("disabled");
+		}
+	});
+	$("input[name='arrowStyle']").change(function(){
+		if ($("input[name='arrowStyle']:checked").val() === "no") {
+			$("input[name='arrow']").attr("disabled", "disabled");
+		} else {
+			$("input[name='arrow']").removeAttr("disabled");
+		}
+	});
+	
+	$("#justApply").click(function(){
+		$(".testContent").html(basicHtml);
+		var o = {
+				str: $("input[name='str']").val(),
+				toggleSpeed:   $("input[name='toggleSpeed']").val(),
+				slideType:     $("input[name='slideType']:checked").val(),
+				showBoxType:   $("input[name='showBoxType']:checked").val(),
+				showBoxClick:  $("input[name='showBoxClick']:checked").val(),
+				//showBoxClass:  $("input[name='showBoxClass']").val(),//
+				thumbBoxType:  $("input[name='thumbBoxType']:checked").val(),
+				thumbBoxClick: $("input[name='thumbBoxClick']:checked").val(),
+				//thumbBoxClass: $("input[name='thumbBoxClass']").val(),//
+				arrow:         $("input[name='arrow']:checked").val(),
+				arrowStyle:    $("input[name='arrowStyle']:checked").val(),
+				thumbArrow:    $("input[name='thumbArrow']:checked").val(),
+				thumbArrowStyle:$("input[name='thumbArrowStyle']:checked").val()
+				/*arrowClass:    $("input[name='arrowClass']").val()*/
+			};
+		console.warn($("#testContent").jAlbum(o));
+	});
+});
+</script>
+</body>
+</html>
