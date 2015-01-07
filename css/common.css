@@ -107,6 +107,7 @@ a.btn.blue, button.btn.blue {
 }
 a.btn.blue:hover, button.btn.blue:hover {
 	background: #08E;
+}
 .opacity-5 {
 		filter:alpha(opacity=50);
 		-moz-opacity:0.5;
