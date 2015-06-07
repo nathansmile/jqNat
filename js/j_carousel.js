@@ -4,7 +4,7 @@
  * Nathan, 2014.5.8 制作
  **/
 
-(function($) {       
+(function($) {
 $.fn.jCarousel = function(oo) {
 	var o = {
 			frameID: "",
@@ -152,5 +152,5 @@ $.fn.jCarousel = function(oo) {
 		clickPlay();
 	});
 	autoPlay();
-};     
+};
 })(jQuery); 

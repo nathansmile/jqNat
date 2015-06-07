@@ -4,7 +4,7 @@
  * Nathan, 2014.5.8 制作
  **/
  
-(function($) {       
+(function($) {
 $.fn.jAlbum = function(oo) {
 	var o = {
 			toggleSpeed: 700,
@@ -355,5 +355,5 @@ $.fn.jAlbum = function(oo) {
 	if (o.showBoxType !== "no") {
 		thisFrame.find(".thumb-box li img").eq(0).click();
 	}
-};     
+};
 })(jQuery); 
