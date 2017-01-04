@@ -1,7 +1,8 @@
-@charset "utf-8";
+@charset "UTF-8";
 /** CSS Document 
  * 轮播组件样式文件
- * Nathan, 2013.12.16制作
+ * Nathan Jiang (nathansmile@163.com)
+ * 2014.5 制作
  **/
 .carousel_round, .carousel_round_box * {
 	-moz-border-radius: 50%;
@@ -10,21 +11,21 @@
 	border-radius: 50%;
 }
 
-.j_carousel	{
+.j_carousel {
 	width: 100%;
 	height: 100%;
 	position: relative;
 	overflow: hidden;
 }
-.j_carousel	.imgFrame {
+.j_carousel .imgFrame {
 	position: absolute;
 	height: 100%;
 }
-.j_carousel	.imgFrame li {
+.j_carousel .imgFrame li {
 	float: left;
 	height: 100%;
 }
-.j_carousel	.imgFrame li.forFade {
+.j_carousel .imgFrame li.forFade {
 	position: absolute;
 	top: 0;
 }
@@ -59,11 +60,11 @@
 .j_carousel .rightArrow:hover {
 	right: 3px;
 }
-.j_carousel	img {
+.j_carousel img {
 	width: 100%;
 	height: 100%;
 }
-.j_carousel	.bottonInfo {
+.j_carousel .bottonInfo {
 	width: 100%;
 	height: 100px;
 	background: #000;
@@ -74,36 +75,39 @@
 	bottom: 0;
 	color: #FFF;
 }
-.j_carousel	.bottonInfo li {
+.j_carousel .bottonInfo li {
 	display: none;
 }
-.j_carousel	.bottonInfo li.active {
+.j_carousel .bottonInfo li.active {
 	display: block;
 }
-.j_carousel	.bottonInfo p, .j_carousel	.bottonInfo h4 {
+.j_carousel .bottonInfo p, .j_carousel .bottonInfo h4 {
 	margin: 5px 15px;
 }
-.j_carousel	.activePoint {
+.j_carousel .activePoint {
 	height: 15px;
 	position: absolute;
 	padding: 10px 15px;
 }
-.j_carousel	.activePoint.bg {
+.j_carousel .activePoint.bg {
 	background: #FFF;
 }
-.j_carousel	.activePoint.lt, .j_carousel .activePoint.rt {
+.j_carousel .activePoint.lt,
+.j_carousel .activePoint.rt {
 	top: 10px;
 }
-.j_carousel	.activePoint.lb, .j_carousel .activePoint.rb {
+.j_carousel .activePoint.lb,
+.j_carousel .activePoint.rb,
+.j_carousel .activePoint.cb {
 	bottom: 10px;
 }
-.j_carousel	.activePoint.lt, .j_carousel .activePoint.lb {
+.j_carousel .activePoint.lt, .j_carousel .activePoint.lb {
 	left: 15px;
 }
-.j_carousel	.activePoint.rt, .j_carousel .activePoint.rb {
+.j_carousel .activePoint.rt, .j_carousel .activePoint.rb {
 	right: 15px;
 }
-.j_carousel	.activePoint li {
+.j_carousel .activePoint li {
 	width: 15px;
 	height: 15px;
 	line-height: 15px;
@@ -113,14 +117,22 @@
 	cursor: pointer;
 	text-align: center;
 }
-.j_carousel	.activePoint li:last-child {
+.j_carousel .activePoint li:last-child {
 	margin-right: 0;
 }
-.j_carousel	.activePoint li.active {
-	background: #691419;
+.j_carousel .activePoint li.active {
+	background: #000;
 	color: #FFF;
 }
-.j_carousel	.activePoint.size_m {
+.j_carousel .activePoint.size_xs {
+	height: 10px;
+}
+.j_carousel .activePoint.size_xs li {
+	width: 10px;
+	height: 10px;
+	line-height: 10px;
+}
+.j_carousel .activePoint.size_m {
 	height: 20px;
 }
 .j_carousel .activePoint.size_m li {
@@ -128,7 +140,7 @@
 	height: 20px;
 	line-height: 20px;
 }
-.j_carousel	.activePoint.size_l {
+.j_carousel .activePoint.size_l {
 	height: 25px;
 }
 .j_carousel .activePoint.size_l li {

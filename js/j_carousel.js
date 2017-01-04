@@ -1,13 +1,13 @@
 /** JS Document 
  * 轮播组件
  * 传入一个对象即可
- * Nathan, 2014.5.8 制作
+ * Nathan (nathansmile@163.com), 2014.5.8 制作
  **/
 
 (function($) {
 $.fn.jCarousel = function(oo) {
 	var o = {
-			frameID: "",
+			//frameID: "",
 			carouselSpeed: 3000,
 			toggleSpeed: 700,
 			slideType: "normal",
@@ -18,7 +18,8 @@ $.fn.jCarousel = function(oo) {
 			pointClass: "",
 			pointBg: "",
 			arrow: "normal",
-			arrowClass: ""
+			arrowClass: "",
+			itemElement: "img"//循环的单个个体
 		},
 		nowIndex = -1,
 		lastIndex = 0,
@@ -29,7 +30,8 @@ $.fn.jCarousel = function(oo) {
 	o = $.extend(o, oo);
 	o.carouselSpeed = parseInt(o.carouselSpeed);
 	o.toggleSpeed = parseInt(o.toggleSpeed);
-	thisFrame = o.frameID ? $("#"+o.frameID+" .j_carousel") : $(".j_carousel");
+	//thisFrame = o.frameID ? $("#"+o.frameID+" .j_carousel") : $(".j_carousel");
+	thisFrame = $(this).find(".j_carousel");
 	j_carousel_len = thisFrame.find("img").length;
 	
 	if(!j_carousel_len){
@@ -37,7 +39,10 @@ $.fn.jCarousel = function(oo) {
 	}
 		//初始图片数据
 	var basicImgWidth = parseInt(thisFrame.css("width"));
-	thisFrame.find("img").css("width", basicImgWidth + "px");
+	thisFrame.find(o.itemElement).css("width", basicImgWidth + "px");
+	thisFrame.css({
+		width: basicImgWidth
+	});
 	thisFrame.find(".imgFrame").css("width", basicImgWidth*j_carousel_len + "px");
 	if (o.slideType === "fade") {
 		thisFrame.find(".imgFrame li").addClass("forFade").css("left",basicImgWidth + "px");
@@ -83,6 +88,9 @@ $.fn.jCarousel = function(oo) {
 		case "round":
 			arrowStr = "<span class='leftArrow carousel_round'>&lt;</span><span class='rightArrow carousel_round'>&gt;</span>";
 			break;
+		case "selfArrow":
+			arrowStr = "<span class='leftArrow'></span><span class='rightArrow'></span>";
+			break;
 		default : 
 			arrowStr = "<span class='leftArrow'>&lt;</span><span class='rightArrow'>&gt;</span>";
 			break;
@@ -91,9 +99,14 @@ $.fn.jCarousel = function(oo) {
 		arrowStr = "<div class='" + o.arrowClass + "'>" + arrowStr + "</div>";
 	}
 	thisFrame.append(activePointStr + arrowStr);
+	
+	/*if (o.pointPosition === "cb") {
+		var pointWidth = parseInt(thisFrame.find(".activePoint").width()) + 30;
+		thisFrame.find(".activePoint").css("left", (basicImgWidth - pointWidth) / 2);
+	}*/
 		//将当前索引的数据显示出来
 	function showNowCarousel() {
-		thisFrame.find(".bottonInfo li, .j_carousel .activePoint li").removeClass("active");
+		thisFrame.find(".bottonInfo li, .activePoint li").removeClass("active");
 		thisFrame.find(".bottonInfo li").eq(nowIndex).addClass("active");
 		thisFrame.find(".activePoint li").eq(nowIndex).addClass("active");
 		if (o.slideType === "fade") {
